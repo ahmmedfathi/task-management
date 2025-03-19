@@ -1,0 +1,55 @@
+### Register User
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "123456"
+}
+
+###
+
+### Login User
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "123456"
+}
+
+###
+
+### Get All Tasks (Add Token Below)
+GET http://localhost:5000/api/tasks
+Authorization: Bearer {{your_token_here}}
+
+###
+
+### Create Task
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+Authorization: Bearer {{your_token_here}}
+
+{
+  "title": "Test Task",
+  "description": "This is a test task"
+}
+
+###
+
+### Update Task
+PUT http://localhost:5000/api/tasks/{{task_id_here}}
+Content-Type: application/json
+Authorization: Bearer {{your_token_here}}
+
+{
+  "title": "Updated Task Title",
+  "status": "completed"
+}
+
+###
+
+### Delete Task
+DELETE http://localhost:5000/api/tasks/{{task_id_here}}
+Authorization: Bearer {{your_token_here}}
